@@ -1,0 +1,36 @@
+
+#home {
+  text-align: right;
+  color:darkgrey;
+  font-family: spartan;
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+}
+h2{
+  margin:200px 50px 50px 50px;
+  text-align: center;
+  color:rgb(153, 150, 150);
+  font-family: spartan;
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+ }
+
+#aboutme{
+  text-align: center;
+  color:darkgrey;
+  font-family: spartan;
+  font-style: oblique;
+  font-weight: 100;
+  font-display: block;
+}  
+.subtitle{
+  text-align: right;
+  color:rgb(221, 221, 221);
+  font-family: spartan;
+  font-style: oblique;
+  font-weight: 100;
+  font-display: block;
+}
+ 
