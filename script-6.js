@@ -1,31 +1,5 @@
-// const INSTAGRAM_URL = 'https://www.instagram.com/graphql/query/?query_hash=56a7068fea504063273cc2120ffd54f3&variables={%22id%22:%223267548177%22,%22first%22:6,%22after%22:%22%22}'
-
-//https://ig.instant-tokens.com/users/29745c13-e51a-42ba-a788-838347ab8d8e/instagram/17841403245328444/token.js?userSecret=ct3fo7nyoca3zocowc3xdp
-const BACKEND_URL_GET_LATEST_PHOTOS = 'https://us-west2-agapehair-307621.cloudfunctions.net/fetch';
-const INSTAGRAM_POST_PREFIX = "https://instagram.com/p/";
-
-const getJSON = (url, callback) => {
-  fetch('temp.json')
-  .then(response => response.json())
-  .then(json => callback(null, json));
-  return;
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'json';
-  xhr.onload = () => {
-    const status = xhr.status;
-    if (status === 200) {
-      callback(null, xhr.response);
-    } else {
-      callback(status, xhr.response);
-    }
-  };
-  xhr.send();
-};
 
 document.addEventListener('DOMContentLoaded', () => {
-  // load instagram photos
-  getJSON(BACKEND_URL_GET_LATEST_PHOTOS, onReceiveInstagramPhotos);
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   // Check if there are any navbar burgers
@@ -44,54 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   hidePlaceholderImages();
 });
-
-const onReceiveInstagramPhotos = (err, resp) => {
-  if (err == null) {
-    const timelineItems = resp.data.user.edge_owner_to_timeline_media.edges;
-    const photos = timelineItems.map(item => {
-      return {
-        imageSrc: item.node.thumbnail_src,
-        imageCode: item.node.shortcode
-      };
-    });
-    addPhotosToHTML(photos);
-  } else {
-    console.log(err, resp);
-  }
-};
-
-const addPhotosToHTML = photos => {
-  const fragment = document.createDocumentFragment();
-  const photoColumns = photos.forEach(photo => {
-    const img = document.createElement("img");
-    img.setAttribute('src', photo.imageSrc);
-
-    const aLink = document.createElement("a");
-    aLink.setAttribute('href', INSTAGRAM_POST_PREFIX + photo.imageCode);
-    aLink.appendChild(img);
-
-    const figure = document.createElement("figure");
-    figure.classList.add("image", "is-square");
-    figure.appendChild(aLink);
-    
-    const cardImage = document.createElement("div");
-    cardImage.classList.add("card-image");
-    cardImage.appendChild(figure);
-
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.appendChild(cardImage);
-
-    const column = document.createElement("div");
-    column.classList.add("column", "is-4");
-    column.appendChild(card);
-
-    fragment.appendChild(column);
-  });
-
-  const instagramFeed = document.getElementById("instagram-feed");
-  instagramFeed.appendChild(fragment);
-};
 
 const clearForm = () => {
 

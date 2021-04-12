@@ -7,7 +7,7 @@
   font-weight: 100;
   font-display: block;
 }
-h2{
+h2 {
   margin:200px 50px 50px 50px;
   text-align: center;
   color:rgb(153, 150, 150);
@@ -17,20 +17,156 @@ h2{
   font-display: block;
  }
 
-#aboutme{
+#aboutme {
   text-align: center;
   color:darkgrey;
-  font-family: spartan;
-  font-style: oblique;
-  font-weight: 100;
   font-display: block;
-}  
-.subtitle{
+  font-family: JetBrains Mono;
+  font-style: normal;
+  font-weight: 500;
+}
+#agape {
+  background-image: url('images/hairbackground.jpg');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: center center;
+  background-size: cover;
+}
+
+#navbarBasicExample {
+  background-color: transparent;
+}
+
+#home-subtitle {
   text-align: right;
-  color:rgb(221, 221, 221);
+  color: rgb(221, 221, 221);
   font-family: spartan;
   font-style: oblique;
-  font-weight: 100;
+  font-weight: 30;
   font-display: block;
 }
- 
+
+#hometitle {
+  text-align: center;
+  font-size: 60px;
+  color: rgb(231, 231, 231);
+  font-family: spartan;
+  font-style: normal;
+  font-weight: 800;
+  padding-bottom: 30%;
+}
+
+.title {
+  margin-bottom: 6rem !important;
+  text-align: center;
+  font-family: JetBrains Mono;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.navbar-item {
+  color: white;
+  padding: 8px 60px 8px 0px;
+  font-family: JetBrains Mono;
+  font-style: normal;
+  font-weight: 500;
+}
+
+a.navbar-item:hover {
+  color: antiquewhite;
+  background-color: transparent;
+}
+
+#service {
+  text-align: center;
+  font-family: JetBrains Mono;
+  font-style: normal;
+  font-weight: 500;
+}
+
+#service-color-less-than-half-level {
+  margin-bottom: 0;
+}
+
+#mens-hair {
+  margin-bottom: 0;
+}
+
+#men-no-new-client {
+  font-size: small;
+  margin-bottom: 24px;
+}
+
+#root-touch-up {
+  margin-bottom: 10px;
+}
+
+#single-process {
+  margin-bottom: 0;
+}
+
+#or-tone {
+  margin-bottom: 24px;
+}
+
+#balayage {
+  word-break: keep-all;
+}
+
+#Gallery {
+  background-color: #363636;
+}
+
+#Gallery .title {
+  color: white;
+}
+
+.subtitle {
+  font-family: Oswald;
+  font-style: normal;
+  color: grey !important;
+}
+
+.tile>.title {
+  margin-bottom: 6rem !important;
+  font-weight: 900:
+}
+
+.instagramlogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.5rem;
+  width: 50%;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.long-table-header {
+  word-break: break-word;
+}
+
+td:first-child {
+  font-weight: bold
+}
+
+#instafeed img {
+  object-fit: cover;
+}

@@ -14,164 +14,6 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
 	 crossorigin="anonymous">
-	<script src="instafeed.min.js"></script>
-  <script src="script-6.js"></script>
-	<style>
-		#agape {
-			background-image: url('images/hairbackground.jpg');
-			background-repeat: no-repeat;
-			object-fit: cover;
-			background-position: center center;
-			background-size: cover;
-		}
-
-		#navbarBasicExample {
-			background-color: transparent;
-		}
-
-		/* #irephoto {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      } */
-		#home-subtitle {
-			text-align: right;
-			color: rgb(221, 221, 221);
-			font-family: spartan;
-			font-style: oblique;
-			font-weight: 30;
-			font-display: block;
-		}
-
-		#hometitle {
-			text-align: center;
-			font-size: 60px;
-			color: rgb(231, 231, 231);
-			font-family: spartan;
-			font-style: normal;
-			font-weight: 800;
-			padding-bottom: 30%;
-		}
-
-		.title {
-			margin-bottom: 6rem !important;
-			text-align: center;
-			font-family: JetBrains Mono;
-			font-style: normal;
-			font-weight: 500;
-		}
-
-		.navbar-item {
-			color: white;
-			padding: 8px 60px 8px 0px;
-			font-family: JetBrains Mono;
-			font-style: normal;
-			font-weight: 500;
-		}
-
-		a.navbar-item:hover {
-			color: antiquewhite;
-			background-color: transparent;
-		}
-
-		#aboutme {
-			/* background-image: url(https://practice.agapehair.ca/images/aboutme.jpg); */
-			text-align: center;
-			font-family: JetBrains Mono;
-			font-style: normal;
-			font-weight: 500;
-		}
-
-		#service {
-			text-align: center;
-			font-family: JetBrains Mono;
-			font-style: normal;
-			font-weight: 500;
-		}
-
-		#service-color-less-than-half-level {
-			margin-bottom: 0;
-		}
-
-		#mens-hair {
-			margin-bottom: 0;
-		}
-
-		#men-no-new-client {
-			font-size: small;
-			margin-bottom: 24px;
-		}
-
-		#root-touch-up {
-			margin-bottom: 10px;
-		}
-
-		#single-process {
-			margin-bottom: 0;
-		}
-
-		#or-tone {
-			margin-bottom: 24px;
-		}
-
-		#balayage {
-			word-break: keep-all;
-		}
-
-		#Gallery {
-			background-color: #363636;
-		}
-
-		#Gallery .title {
-			color: white;
-		}
-
-		.subtitle {
-			font-family: Oswald;
-			font-style: normal;
-			color: grey !important;
-		}
-
-		.tile>.title {
-			margin-bottom: 6rem !important;
-			font-weight: 900:
-		}
-
-		.instagramlogo {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			padding-bottom: 1.5rem;
-			width: 50%;
-		}
-
-		.map-responsive {
-			overflow: hidden;
-			padding-bottom: 56.25%;
-			position: relative;
-			height: 0;
-		}
-
-		.map-responsive iframe {
-			left: 0;
-			top: 0;
-			height: 100%;
-			width: 100%;
-			position: absolute;
-		}
-
-    .table-wrapper {
-      overflow-x: auto;
-    }
-
-    .long-table-header {
-      word-break: break-word;
-    }
-
-    td:first-child {
-      font-weight: bold
-    }
-	</style>
 </head>
 
 <body>
@@ -394,7 +236,7 @@
     <section id="Gallery" class="section">
       <div class="container">
         <h2 class="title is-1">GALLERY.</h2>
-        <div id="instagram-feed" class="columns is-multiline">
+        <div id="instafeed" class="columns is-multiline">
           <!-- Javascript will add photos here -->
         </div>
       </div>
@@ -673,18 +515,6 @@
             </label>
           </div>
         </div>
-        <div class="field">
-          <div class="control">
-            <label class="radio">
-            <input type="radio" name="question">
-            Yes
-            </label>
-            <label class="radio">
-            <input type="radio" name="question">
-            No
-            </label>
-          </div>
-        </div>
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-link" onclick="formSubmit()">Submit</button>
@@ -707,8 +537,18 @@
         </p>
       </div>
     </footer>
+
+    <script src="https://ig.instant-tokens.com/users/29745c13-e51a-42ba-a788-838347ab8d8e/instagram/17841403245328444/token.js?userSecret=ct3fo7nyoca3zocowc3xdp"></script>
+    <script src="instafeed.min.js"></script>
+    <div id="instafeed"></div>
+    <script type="text/javascript">
+        var feed = new Instafeed({
+          accessToken: InstagramToken,
+          limit: 6,
+          template: '<div class="column is-4"><div class="card"><div class="card-image"><figure class="image is-square"><a href="{{link}}"><img src="{{image}}&media/?size=t"></a></figure></div></div></div>'
+        });
+        feed.run();
+    </script>
+    <script src="script-6.js"></script>
   </body>
 </html>
-<!-- pop up message after submit  -->
-<!-- map responsive size  -->
-<!-- service column is overflowed -->
