@@ -17,12 +17,19 @@
         
         <style>
                 #agape {
-                        background-image: url('images/hairbackground.jpg');
+                        background-image: url('hairbackground-mobile.mp4');
                         background-repeat: no-repeat;
                         object-fit: cover;
                         background-position: center center;
                         background-size: cover;
                 }
+                  @media only screen and (max-width: 600px) {
+  #agape {
+    background-position: top center;
+    background-size: contain;
+    background-color: #222;
+    background-image: url('images/hairbackground-mobile.mp4'); */
+  }
 
                 #navbarBasicExample {
                         background-color: transparent;
@@ -190,14 +197,7 @@
       height: 100%;
       object-fit: cover;
     }
-                @media only screen and (max-width: 600px) {
-  #agape {
-    background-position: top center;
-    background-size: contain;
-    background-color: #222;
-    background-image: url('images/hairbackground-mobile.jpg'); */
-  }
-}
+               
         </style>
 </head>
 
