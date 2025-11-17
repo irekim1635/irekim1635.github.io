@@ -32,7 +32,13 @@ h2 {
   background-position: center center;
   background-size: cover;
 }
-
+@media only screen and (max-width: 600px) {
+            #agape {
+                background-image: url('images/hairbackground-mobile.jpg');
+                background-position: top center;
+                background-size: contain;
+                background-color: #222;
+            }
 #navbarBasicExample {
   background-color: transparent;
 }
