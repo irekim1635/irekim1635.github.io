@@ -816,8 +816,41 @@
         </p>
       </div>
     </footer>
+        <!-- pop up message after submit  -->
+        <div id="successModal" class="modal">
+      <div class="modal-background" onclick="closeModal()"></div>
+      <div class="modal-content">
+        <div class="box has-text-centered">
+          <span class="icon is-large has-text-success">
+            <i class="fas fa-check-circle fa-3x"></i>
+          </span>
+          <h2 class="title is-4 mt-4">Thank you!</h2>
+          <p class="subtitle is-6">The form has been submitted successfully, we will reply to you soon!</p>
+          <button class="button is-success" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
+    </div>
+    
+    <!-- Error Modal Popup -->
+    <div id="errorModal" class="modal">
+      <div class="modal-background" onclick="closeErrorModal()"></div>
+      <div class="modal-content">
+        <div class="box has-text-centered">
+          <span class="icon is-large has-text-danger">
+            <i class="fas fa-exclamation-circle fa-3x"></i>
+          </span>
+          <h2 class="title is-4 mt-4">Error</h2>
+          <p class="subtitle is-6">Error submitting form, please call or try again later.</p>
+          <button class="button is-danger" onclick="closeErrorModal()">Close</button>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close" onclick="closeErrorModal()"></button>
+    </div>
+           <!-- Load JavaScript -->
+    <script src="script-6.js"></script>
   </body>
 </html>
-<!-- pop up message after submit  -->
+
 <!-- map responsive size  -->
 <!-- service column is overflowed -->
