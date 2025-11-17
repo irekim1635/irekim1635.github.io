@@ -16,19 +16,10 @@
          crossorigin="anonymous">
         
         <style>
-              /* Background video is handled in HTML, no need for background-image for MP4! */
+       
         #agape {
             position: relative;
             overflow: hidden;
-        }
-        #background-video {
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            top: 0;
-            left: 0;
-            z-index: -1;
         }
         @media only screen and (max-width: 600px) {
             #agape {
@@ -211,11 +202,7 @@
         
                         <section class="hero is-fullheight" id="agape">
                                  <div id="home">       
-  <video id="background-video" autoplay muted loop>
-    <source src="images/hairbackground-mobile.MP4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
+  
   ...
 </section>
                         <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
